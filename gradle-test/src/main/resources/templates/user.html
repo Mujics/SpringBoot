@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>User page</h1>
+
+        <h2><a th:href="@{/modifySecondEmail}">1.</a> Modificar Email Alternativo</h2>
+        <h2><a th:href="@{/modifyPassword}">2.</a> Modificar Contrase&ntilde;a</h2>
+        
+        <!-- Form para envio de email -->
+        <form class="pure-form" action="#" th:action="@{/sendEmail}" method="post" th:object="${email}">
+	    	<fieldset>
+		        <input type="email" placeholder="Email@example.com" th:field="*{to}" id="email" th:required="required"></input>
+		        <button type="submit" value="Submit" class="pure-button pure-button-primary">Enviar Test Email</button>
+	    	</fieldset>
+    	</form>
+    </div>
+
+</div>
+<!-- /.container -->
+<div th:replace="fragments/footer :: footer"/>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+
+    <div th:replace="fragments/header :: header-css"/>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Tarjeta Naranja</h1>
+        <h2><a th:href="@{/admin}">1.</a> Ir a pagina Admin</h2>
+        <h2><a th:href="@{/user}">2.</a> Ir a pagia User</h2>
+        <h2><a th:href="@{/clearPassword}">4.</a> Blanquear Contrase&ntilde;a </h2>
+        <h2><a th:href="@{/unlockPassword}">6.</a> Desbloquear Contrase&ntilde;a</h2>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
